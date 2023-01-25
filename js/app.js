@@ -4,13 +4,13 @@ class Tamagotchi {
         this.age = 0;
         this.hunger = 10;
         this.tiredness = 10;
-        this.boredom = 10;
+        this.pwrLevel = 10;
     }
     eat(){
         this.hunger++
     }
-    play(){
-        this.boredom++
+    train(){
+        this.pwrLevel++
     }
     sleep(){
         this.tiredness++
