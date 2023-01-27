@@ -70,10 +70,14 @@ document.addEventListener("DOMContentLoaded", function() {
             let hungerID = document.querySelector("#Hunger")
             hungerID.innerHTML = `Hunger: ${newSaiyan.hunger}`
             console.log(newSaiyan.hunger)
-            if(newSaiyan.hunger === 0 ){
+            if(newSaiyan.tiredness === 0 || newSaiyan.pwrLevel ===0 ){
                 clearInterval(myInterval)
+            }else if (newSaiyan.hunger === 0){
+                clearInterval(myInterval)
+                alert(`${newSaiyan.name} has died of hunger`)
+
             }
-        }, 1000)},
+        }, 3000)},
     setSleep(){
         
 
@@ -81,10 +85,14 @@ document.addEventListener("DOMContentLoaded", function() {
             newSaiyan.tiredness -=1
             let ID = document.querySelector("#Stamina")
             ID.innerHTML = `Muscle Stamina: ${newSaiyan.tiredness}`
-            if(newSaiyan.tiredness === 0 ){
+            if(newSaiyan.hunger === 0 || newSaiyan.pwrLevel === 0 ){
                 clearInterval(myInterval)
+            }else if(newSaiyan.tiredness === 0){
+                clearInterval(myInterval)
+                alert(`${newSaiyan.name} has died of fatigue`)
+
             }
-        }, 2000)},
+        }, 4000)},
 
     setPwrlevel(){
         
@@ -93,10 +101,15 @@ document.addEventListener("DOMContentLoaded", function() {
             newSaiyan.pwrLevel -=1
             let ID = document.querySelector("#Power")
             ID.innerHTML = `Power Level: ${newSaiyan.pwrLevel}`
-            if(newSaiyan.pwrLevel === 0 ){
+            if(newSaiyan.tiredness === 0 || newSaiyan.hunger === 0){
                 clearInterval(myInterval)
+            }else if(newSaiyan.pwrLevel === 0){
+                clearInterval(myInterval)
+                alert(`${newSaiyan.name} ran out of power and died`)
+
+
             }
-        }, 4000)},
+        }, 5000)},
 
     setAge(){
         
@@ -108,12 +121,13 @@ document.addEventListener("DOMContentLoaded", function() {
             if(newSaiyan.age === 5){
                 document.getElementById("Pet").src = "https://www.transparentpng.com/thumb/goku/EOWcfb-goku-clipart-transparent.png"
                 document.getElementById("Pet").alt = "goku clipart transparent @transparentpng.com"
-                
+                alert(`${newSaiyan.name} has reached Super Saiyan!`)
             }else if (newSaiyan.age === 10){
                 document.getElementById("Pet").src = "https://www.transparentpng.com/thumb/goku/y5OESW-goku-clipart-png-file.png" 
+                alert(`${newSaiyan.name} has reached Super Saiyan Blue!`)
 
             }
-            if(newSaiyan.age === 20 ){
+            if(newSaiyan.age === 20 || newSaiyan.tiredness === 0 || newSaiyan.pwrLevel ===0 || newSaiyan.hunger === 0 ){
                 clearInterval(myInterval)
             }
 
@@ -134,6 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
         newSaiyan.eat()
         let hungerID = document.querySelector("#Hunger")
         hungerID.innerHTML = `Hunger: ${newSaiyan.hunger}`
+
     
     })
     trainButton.addEventListener("click", () =>{
@@ -148,9 +163,12 @@ document.addEventListener("DOMContentLoaded", function() {
     sleepID.innerHTML = `Muscle Stamina: ${newSaiyan.tiredness}`
     });
 
+    alert("Instructions: Keep your Saiyan alive by by making sure none of their stats reach: 0. Click Let's Go! to begin")
 
 
 })
 
 
+
+console.log(document.getElementById("Pet"))
 

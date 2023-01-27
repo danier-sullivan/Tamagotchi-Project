@@ -1,3 +1,49 @@
 body{
-    background-color: aquamarine;
+    background-image: url(https://i.pinimg.com/originals/74/11/f9/7411f92fb70e26e668c225b45cc48823.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    
 }
+h1{
+    color: black;
+    text-align: center;
+    background-color: antiquewhite;
+    
+    
+}
+.Buttons{
+text-align: center;
+width: auto;
+padding: 10px 24px
+
+}
+#Start{
+    font-size: 25px;
+}
+#Feed{
+    font-size: 25px;
+}
+#Train{
+    font-size: 25px;
+}
+#Sleep{
+    font-size: 25px;
+}
+.Stats{
+    text-align: center;
+    background-color: aliceblue;
+    font-size: 25px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    word-spacing: 10px;
+
+}
+/* .images{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+} */
