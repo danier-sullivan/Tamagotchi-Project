@@ -1,5 +1,5 @@
 //Create 
-document.addEventListener("DOMContentLoaded", function() {
+//document.addEventListener("DOMContentLoaded", function() {
 
 
     class Saiyan {
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function() {
     alert("Instructions: Keep your Saiyan alive by by making sure none of their stats reach: 0. Click Let's Go! to begin")
 
 
-})
+//})
 
 
 
